@@ -48,10 +48,23 @@ function playGame(){
     }
 
     playRound(humanChoice, computerChoice);
+
 }
 
-function playAgain(){
-    playGame();
+function playNow(){
+    for (let i = 0; i < 5; i++) {
+        if (i < 5){
+            playGame();
+        } else {
+            if (humanScore > computerScore) {
+                console.log(`Human wins with a score of ${humanScore} to ${computerScore}`);
+            } else if (computerScore > humanScore) {
+                console.log(`Computer wins with a score of ${computerScore} to ${humanScore}`);
+            } else {
+                console.log(`Draw of ${humanScore} to ${computerScore}`);
+            }
+        }
+    }
 }
 
 let updateHumanScore = document.getElementById("humanScore");
