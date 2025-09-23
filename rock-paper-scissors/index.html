@@ -5,35 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <style>
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        button {
-            font-size: xx-large;
-            margin: 64px;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
 </head>
 <body>
     <div>
         <h1>Rock Paper Scissors</h1>
+        <h2>Choose an option below:</h2>
     </div>
     <div>
-        <button onclick="playNow()">Click me to play a best of 5 games!</button>
+        <button onclick="playRock()">Rock</button>
+        <button onclick="playPaper()">Paper</button>
+        <button onclick="playScissors()">Scissors</button>
     </div>
     <div>
         <h2>Current Score</h2>
     </div>
-    <div class="container">
+    <div id="container">
         <h3>Human: <span id="humanScore">0</span></h3>
         <h3>Computer: <span id="computerScore">0</span></h3>
     </div>
