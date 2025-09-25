@@ -1,0 +1,16 @@
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    background: red;
+    border: 2px solid black;
+    flex: 1;
+}
+
+.square {
+    display: flex;
+}
