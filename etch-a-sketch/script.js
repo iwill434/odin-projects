@@ -33,3 +33,14 @@ const boxes = document.querySelectorAll(".row");
 for (let i = 0; i < boxes.length; i++){
     boxes[i].addEventListener("mouseover",changeColor);
 }
+
+// Button functionality
+const resetButton = document.getElementById("reset-button");
+
+function resetColor() {
+    boxes.forEach(box => {
+        box.style.backgroundColor = "tan";
+    });
+}
+
+resetButton.addEventListener("click", resetColor);
