@@ -1,8 +1,13 @@
 // Create grid
 const container = document.querySelector("#container");
 
-let numRows = 16;
-let numColumns = 16;
+let numColumns = 100;
+let numRows = 100;
+
+function changeNumColumns () {
+
+}
+
 
 for (i = 0; i < numColumns; i++) {
     const makeColumn = document.createElement("div");
@@ -20,7 +25,7 @@ for (i = 0; i < numColumns; i++) {
 
 // Hover effect
 function changeColor() {
-    this.style.backgroundColor = "blue";
+    this.style.backgroundColor = "black";
 }
 
 const boxes = document.querySelectorAll(".row");
