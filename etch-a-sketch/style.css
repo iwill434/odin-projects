@@ -1,12 +1,20 @@
 #container {
     display: flex;
     height: 100vh;
+    border: 10px solid blue;
 }
 
 .column {
     display: flex;
     flex-direction: column;
     background: red;
+    border: 2px solid black;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
     border: 2px solid black;
     flex: 1;
 }

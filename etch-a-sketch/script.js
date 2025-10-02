@@ -1,15 +1,21 @@
 // Create grid
 const container = document.querySelector("#container");
 
-let numRows = 1;
-let numColumns = 1;
-const makeColumns = document.createElement("div");
-const makeRows = document.createElement("div");
+let numRows = 16;
+let numColumns = 16;
 
-makeColumns.classList.add("column");
-container.appendChild(makeColumns);
+for (i = 0; i < numColumns; i++) {
+    const makeColumn = document.createElement("div");
+    makeColumn.classList.add("column");
+    container.appendChild(makeColumn);
 
-
-// for (i = 4; i < 4; i++) {
-//     return makeColumns.classList.add("column");
-// }
+    if (numRows > 1) {
+        for (j = 0; j < numRows; j++) {
+            const makeRow = document.createElement("div");
+            makeRow.classList.add("row");
+            makeColumn.appendChild(makeRow);
+            console.log("new row");
+        }
+    }
+    console.log("new column");
+}
