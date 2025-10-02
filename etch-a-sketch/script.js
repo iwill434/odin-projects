@@ -14,8 +14,17 @@ for (i = 0; i < numColumns; i++) {
             const makeRow = document.createElement("div");
             makeRow.classList.add("row");
             makeColumn.appendChild(makeRow);
-            console.log("new row");
         }
     }
-    console.log("new column");
+}
+
+// Hover effect
+function changeColor() {
+    this.style.backgroundColor = "blue";
+}
+
+const boxes = document.querySelectorAll(".row");
+
+for (let i = 0; i < boxes.length; i++){
+    boxes[i].addEventListener("mouseover",changeColor);
 }
