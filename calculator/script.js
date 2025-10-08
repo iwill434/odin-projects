@@ -9,14 +9,15 @@ const subtract = function (a, b) {
     return a - b;
   };
   
-const sum = function (array) {
-    return array.reduce((total, current) => total + current, 0);
+  
+const multiply = function (a, b) {
+    return a * b;
   };
   
-const multiply = function (array) {
-    return array.reduce((product, current) => product * current)
-  };
-  
+const divide = function (a, b) {
+    return a / b;
+}
+
 const power = function (a, b) {
     return a ** b;
   };
@@ -28,3 +29,21 @@ const factorial = function (n) {
     }
     return product;
   };
+
+const ln = function (n) {
+    return ;
+};
+
+const log = function (n) {
+    return ;
+};
+
+
+
+// add event listeners for button clicking as well as keyboard strokes and backspace
+
+// DOM manipulation to add inputs to screen and/or show result
+
+
+
+// only allow users to select decimal once per number
