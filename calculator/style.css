@@ -77,8 +77,8 @@ h1 {
     margin-bottom: 10px;
 }
 
-.operator, .number {
-    background-color: rgb(163, 163, 228);
+.operator, .number, .equals {
+    background-color: rgba(0, 0, 255, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,6 +88,10 @@ h1 {
 
 .number {
     background-color: rgb(250, 250, 250);
+}
+
+.equals {
+    background-color: rgba(0, 0, 255, 0.5);
 }
 
 button {
