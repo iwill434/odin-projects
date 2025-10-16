@@ -1,26 +1,15 @@
 // create functions that go two numbers at a time and then the resulting 
 // number is used for the next operator until cleared
 
-const add = function (a, b) {
-    return a + b;
-  };
+const add = (a, b) => a + b;
   
-const subtract = function (a, b) {
-    return a - b;
-  };
+const subtract = (a, b) => a - b;
   
+const multiply = (a, b) => a * b;
   
-const multiply = function (a, b) {
-    return a * b;
-  };
-  
-const divide = function (a, b) {
-    return a / b;
-}
+const divide = (a, b) => a / b;
 
-const power = function (a, b) {
-    return a ** b;
-  };
+const power = (a, b) => a ** b;
   
 const factorial = function (n) {
     let product = 1;
@@ -41,9 +30,14 @@ const log = function (n) {
 
 
 // add event listeners for button clicking as well as keyboard strokes and backspace
-
 // DOM manipulation to add inputs to screen and/or show result
+const screen = document.getElementById('screen');
 
+let displayValue = '';
+
+const numberButtons = document.querySelectorAll('.number');
+const operatorButtons = document.querySelectorAll('.operator');
+const equalsButton = document.getElementById('equals');
 
 
 // only allow users to select decimal once per number
