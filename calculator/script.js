@@ -19,14 +19,11 @@ const factorial = function (n) {
     return product;
   };
 
-const ln = function (n) {
-    return ;
-};
+const ln = (n) => Math.log(n);
 
-const log = function (n) {
-    return ;
-};
+const log = (n) => Math.log10(n);
 
+const sqrt = (n) => Math.sqrt(n);
 
 
 // add event listeners for button clicking as well as keyboard strokes and backspace
@@ -34,6 +31,7 @@ const log = function (n) {
 const screen = document.getElementById('screen');
 
 let displayValue = '';
+let currentResult = null;
 
 const numberButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
@@ -46,6 +44,8 @@ numberButtons.forEach(button => {
     });
 });
 
+// need to update these to strip away things like the x for factorial and instead just give exclamation mark
+
 operatorButtons.forEach(button => {
     button.addEventListener('click', () => {
         if (button.id === 'clear') {
@@ -57,5 +57,16 @@ operatorButtons.forEach(button => {
         }
     });
 });
+
+// parse what is fed using array, evaluate the inputs using the functions above
+// try to handle order of operations and parentheses
+
+function operate(expression) {
+    expression = expression.trim();
+    let inputs = parseExpression(expression);
+    let result = evaluateInputs(inputs);
+    return result;
+};
+
 
 // only allow users to select decimal once per number
