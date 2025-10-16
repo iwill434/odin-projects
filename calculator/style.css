@@ -77,7 +77,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.operator, .number, .equals {
+.operator, .number, #equals {
     background-color: rgba(0, 0, 255, 0.1);
     display: flex;
     flex-direction: column;

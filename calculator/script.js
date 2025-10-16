@@ -39,5 +39,23 @@ const numberButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
 const equalsButton = document.getElementById('equals');
 
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        displayValue += button.textContent;
+        screen.textContent = displayValue;
+    });
+});
+
+operatorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (button.id === 'clear') {
+            displayValue = '';
+            screen.textContent = displayValue;
+        } else {
+            displayValue += button.textContent;
+            screen.textContent = displayValue;
+        }
+    });
+});
 
 // only allow users to select decimal once per number
