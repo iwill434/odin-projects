@@ -78,8 +78,23 @@ function parseExpression(inputs) {
     return parsedInput;
 }
 
-parseExpression('1+ 1')
+function evaluateInputs(parsedInput) {
+    // let inputs = [];
+    let result = 0
+    // for (let i = 0; i < parsedInput.length; i++) {
+    //     inputs.push(parseFloat(parsedInput[i]));
+        if (parsedInput[1] === '+') {
+            result = add(parseFloat(parsedInput[0]), parseFloat(parsedInput[2]));
+        }
+    // }
+    return result
+}
 
+const parsed = parseExpression('1+ 1');
+const answer = evaluateInputs(parsed);
+console.log(answer);
+
+// update to have the result appear as the displayValue on calculator
 function operate(expression) {
     expression = expression.trim();
     let inputs = parseExpression(expression);
