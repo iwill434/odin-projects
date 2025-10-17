@@ -68,6 +68,18 @@ operatorButtons.forEach(button => {
 // parse what is fed using array, evaluate the inputs using the functions above
 // try to handle order of operations and parentheses
 
+function parseExpression(inputs) {
+    const parsedInput = []; 
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i] !== ' ') {
+            parsedInput.push(inputs[i]);
+        }
+    }
+    return parsedInput;
+}
+
+parseExpression('1+ 1')
+
 function operate(expression) {
     expression = expression.trim();
     let inputs = parseExpression(expression);
