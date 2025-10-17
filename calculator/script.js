@@ -44,12 +44,19 @@ numberButtons.forEach(button => {
     });
 });
 
-// need to update these to strip away things like the x for factorial and instead just give exclamation mark
-
 operatorButtons.forEach(button => {
     button.addEventListener('click', () => {
         if (button.id === 'clear') {
             displayValue = '';
+            screen.textContent = displayValue;
+        } else if (button.id === 'factorial') {
+            displayValue += '!';
+            screen.textContent = displayValue;
+        } else if (button.id === 'sqrt') {
+            displayValue += 'sqrt';
+            screen.textContent = displayValue;
+        } else if (button.id === 'exponent') {
+            displayValue += '^';
             screen.textContent = displayValue;
         } else {
             displayValue += button.textContent;
