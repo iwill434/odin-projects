@@ -70,10 +70,23 @@ operatorButtons.forEach(button => {
 
 function parseExpression(inputs) {
     const parsedInput = []; 
+    let currentNumber = '';
+
     for (let i = 0; i < inputs.length; i++) {
         if (inputs[i] !== ' ') {
-            parsedInput.push(inputs[i]);
+            if ('0123456789.'.includes(inputs[i])) {
+                currentNumber += inputs[i];
+            } else {
+                if (currentNumber) {
+                    parsedInput.push(currentNumber);
+                    currentNumber = '';
+                }
+                parsedInput.push(inputs[i]);
+            }
         }
+    }
+    if (currentNumber) {
+        parsedInput.push(currentNumber);
     }
     return parsedInput;
 }
@@ -111,5 +124,10 @@ function operate(expression) {
     return result;
 };
 
+equalsButton.addEventListener('click', () => {
+        currentResult = operate(displayValue)
+        displayValue = currentResult;
+        screen.textContent = displayValue;
+});
 
 // only allow users to select decimal once per number
