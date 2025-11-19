@@ -86,6 +86,15 @@ function evaluateInputs(parsedInput) {
         if (parsedInput[1] === '+') {
             result = add(parseFloat(parsedInput[0]), parseFloat(parsedInput[2]));
         }
+        if (parsedInput[1] === '-') {
+            result = subtract(parseFloat(parsedInput[0]), parseFloat(parsedInput[2]));
+        }
+        if (parsedInput[1] === '*') {
+            result = multiply(parseFloat(parsedInput[0]), parseFloat(parsedInput[2]));
+        }
+        if (parsedInput[1] === '/') {
+            result = divide(parseFloat(parsedInput[0]), parseFloat(parsedInput[2]));
+        }
     // }
     return result
 }
